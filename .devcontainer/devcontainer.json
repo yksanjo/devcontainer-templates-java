@@ -1,0 +1,53 @@
+{
+  "name": "Java Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "maven": true,
+      "gradle": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-spring-boot-dashboard",
+        "vscjava.vscode-spring-boot-dashboard",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.powershell",
+        "mtxr.sqltools",
+        "visualstudioexptteam.vscodeintellicode",
+        "eamodio.gitlens",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscjava.vscode-java-format",
+        "java.home": "/opt/java/openjdk",
+        "java.import.gradle.java.home": "/opt/java/openjdk",
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "path": "/opt/java/openjdk",
+            "default": true
+          }
+        ],
+        "java.jdt.ls.vmArgs": "-XX:+UseParallelGC",
+        "java.import.gradle.wrapper.enabled": true,
+        "spring-boot.initializr.enable": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "java -version && mvn -version",
+  "portsToForward": [3000, 5005, 8080, 8443],
+  "remoteUser": "vscode",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=local"
+}
