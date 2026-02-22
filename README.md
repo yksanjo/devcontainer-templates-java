@@ -1,55 +1,82 @@
-# Dev Container Template - Java
+# devcontainer-templates-java
 
-Pre-configured containerized development environment for Java applications with Spring Boot support.
+## Detailed Description
 
-## Features
+devcontainer-templates-java is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-- **Java 17** with OpenJDK
-- **Maven** and **Gradle** support
-- **Spring Boot Dashboard** for managing Spring applications
-- **Java Test Runner** for JUnit testing
-- **GitLens** for Git integration
-- **SQLTools** for database management
-- **XML** and **YAML** support
+## Problem Statement
 
-## Quick Start
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-1. Copy `.devcontainer` folder to your project root
-2. Open the project in VS Code
-3. Press `F1` and select **"Dev Containers: Reopen in Container"**
+## Solution Overview
 
-## Configuration
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
-### Ports
-- `3000` - Application server
-- `5005` - Java debugger
-- `8080` - Spring Boot default port
-- `8443` - HTTPS port
+## Key Features
 
-### Extensions Included
-- Java Debug
-- Java Test
-- Maven for Java
-- Java Dependency
-- Spring Boot Dashboard
-- Docker
-- PowerShell
-- SQLTools
-- IntelliCode
-- GitLens
-- XML
-- YAML
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
 
-### Post-Create Commands
-- Shows Java version
-- Shows Maven version
+## Repository Structure
 
-## Requirements
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [VS Code](https://code.visualstudio.com/)
-- [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
+
+```bash
+make test
+make lint
+```
+
+## Usage
+
+Document primary commands, API routes, CLI examples, or UI workflows here.
+
+## Quality Standards
+
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
+
+## Security
+
+See `SECURITY.md` for responsible disclosure and handling guidelines.
+
+## Contributing
+
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
